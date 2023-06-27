@@ -16,6 +16,7 @@ public class EmailView {
     // Create empty properties
     Properties props = System.getProperties();
     props.put("mail.smtp.host", sendHost);
+    props.put("mail.smtp.port", 995);
     props.put("mail.smtp.ssl.protocols","TLSv1.2");
     props.put("mail.smtp.auth","true");
 
@@ -27,7 +28,7 @@ public class EmailView {
 
     // Get the store
     Store store = session.getStore("pop3");
-    store.connect(host, username, password);
+    store.connect(host, 995, username, password);
 
     // Get folder
     Folder folder = store.getFolder("INBOX");
