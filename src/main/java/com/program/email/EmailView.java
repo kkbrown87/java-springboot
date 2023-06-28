@@ -7,18 +7,19 @@ import javax.mail.internet.*;
 
 public class EmailView {
   public void mailTest() throws Exception {
-    String host = "pop.naver.com";
+	String host = "pop.naver.com";
     String sendHost = "pop.naver.com";
-    String username = "milkismania";
-    String password = "unkunhee$Kbn1";
+    String username = "kim871230";
+    String password = "unkunhee$Kbn0";
     String from = "kim871230@naver.com";
 
     // Create empty properties
     Properties props = System.getProperties();
     props.put("mail.smtp.host", sendHost);
-    props.put("mail.smtp.port", 995);
+    props.put("mail.smtp.port", "995");
     props.put("mail.smtp.ssl.protocols","TLSv1.2");
     props.put("mail.smtp.auth","true");
+    props.put("mail.smtp.socketFactory.port", "995");
 
 	Authenticator auth = new MyAuthentication();
 
@@ -85,7 +86,7 @@ public class EmailView {
 class MyAuthentication extends Authenticator {
 	PasswordAuthentication pa;
 	public MyAuthentication(){
-		pa = new PasswordAuthentication("milkismania","unkunhee$Kbn1");
+		pa = new PasswordAuthentication("kim871230","unkunhee$Kbn0");
 	}
 	public PasswordAuthentication getPasswordAuthentication() {
 		return pa;
