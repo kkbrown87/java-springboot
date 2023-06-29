@@ -23,7 +23,7 @@ public class EmailView {
 	Authenticator auth = new MyAuthentication();
 
     // Get session
-    Session session = Session.getDefaultInstance(props, auth);
+    Session session = Session.getDefaultInstance(props, null);
     session.setDebug(true);
 
     // Get the store
