@@ -9,7 +9,7 @@ public class EmailView {
   public void mailTest() throws Exception {
 	String host = "pop.naver.com";
     String sendHost = "pop.naver.com";
-    String username = "kim871230@naver.com";
+    String username = "kim871230";
     String password = "unkunhee$Kbn0";
     String from = "kim871230@naver.com";
 
@@ -53,7 +53,7 @@ public class EmailView {
 class MyAuthentication extends Authenticator {
 	PasswordAuthentication pa;
 	public MyAuthentication(){
-		pa = new PasswordAuthentication("kim871230@naver.com","unkunhee$Kbn0");
+		pa = new PasswordAuthentication("kim871230","unkunhee$Kbn0");
 	}
 	public PasswordAuthentication getPasswordAuthentication() {
 		return pa;
